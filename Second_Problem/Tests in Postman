@@ -1,0 +1,30 @@
+Code of Postman (Tests)
+
+// Test for validationg the coordinates
+
+pm.test("value of longitude is -0.13 and latitude is 51.51",function () {
+    var data = pm.response.json();
+    pm.expect(data.coord.lon).to.eql(-0.13);
+    pm.expect(data.coord.lat).to.eql(51.51);
+});
+
+// Test for validating string present 
+pm.test("Body matches string", function () {
+pm.expect(pm.response.text()).to.include("London");
+
+})
+
+// Test for validating a header
+pm.test("Connection header is present", () => {
+  pm.response.to.have.header("Connection");
+});
+
+// Test for validating array properties
+
+pm.test('Description contains something ', () => {
+    _.each(pm.response.weather, (item) => {
+    pm.expect(item.description).to.include('light intensity drizzle')
+    })
+})
+
+    

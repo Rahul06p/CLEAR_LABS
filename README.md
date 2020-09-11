@@ -1,2 +1,2 @@
-# First-Problem
-Clear Labs
+# CLEAR_LABS
+All 3 problems

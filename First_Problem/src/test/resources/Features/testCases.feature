@@ -1,5 +1,3 @@
-
-
 Feature: feature to test search functionality
 
   Scenario: check search funcationality

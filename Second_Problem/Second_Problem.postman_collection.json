@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "676a2df1-3e7a-47bd-ae87-9b607ecd03d0",
+		"name": "Second_Problem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "OpenWeatherMap",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "27d183aa-3a6a-4628-a7b5-fc24cdd7d5e9",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22.",
+					"protocol": "https",
+					"host": [
+						"samples",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "London,uk"
+						},
+						{
+							"key": "appid",
+							"value": "b6907d289e10d714a6e88b30761fae22."
+						}
+					]
+				},
+				"description": "gets the current weather for London"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
